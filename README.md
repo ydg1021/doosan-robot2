@@ -51,10 +51,12 @@
     $ pip install pyyaml
     $ pip install empy
     $ pip install -U setuptools
+    $ source install/setup.bash
     $ source /opt/ros/foxy/setup.bash
     $ sudo apt-get update
     $ sudo apt-get install ros-foxy-ament-cmake-core
 
+#### Everytime you build a package, always remember to do (from your ROS2 workspace): source install/setup.bash and source /opt/ros/foxy/setup.bash
 
 
 #### dependency package list
