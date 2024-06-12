@@ -38,6 +38,25 @@
     $ colcon build
     $ . install/setup.bash
 
+##### colcon build error
+    ### If you got errors when you "colcon build" you need to download below packages (For install Ubuntu 20.04 and ROS2 first time users)
+    $ sudo apt-get install ros-foxy-control-msgs
+    $ sudo apt-get install ros-foxy-object-recognition-msgs
+    $ sudo apt-get install ros-foxy-octomap-msgs
+    $ sudo apt-get install ros-foxy-control-toolbox
+    $ sudo apt-get install ros-foxy-gazebo-dev
+    $ sudo apt-get install ros-foxy-gazebo-ros
+    $ sudo apt-get install ros-foxy-gazebo-ros-pkgs
+    $ pip install catkin_pkg
+    $ pip install pyyaml
+    $ pip install empy
+    $ pip install -U setuptools
+    $ source /opt/ros/foxy/setup.bash
+    $ sudo apt-get update
+    $ sudo apt-get install ros-foxy-ament-cmake-core
+
+
+
 #### dependency package list
     $ sudo apt-get install ros-foxy-control-msgs ros-foxy-realtime-tools ros-foxy-xacro ros-foxy-joint-state-publisher-gui ros-foxy-object-recognition-msgs ros-foxy-octomap-msgs ros-foxy-gazebo-ros ros-foxy-gazebo-ros-pkgs ros-foxy-control-toolbox
 
