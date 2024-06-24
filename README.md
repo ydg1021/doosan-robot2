@@ -38,7 +38,7 @@
     $ colcon build
     $ . install/setup.bash
 
-##### colcon build error
+##### colcon build error, I think dependency package list will help these problems
     ### If you got errors when you "colcon build" you need to download below packages (For install Ubuntu 20.04 and ROS2 first time users)
     $ sudo apt-get install ros-foxy-control-msgs
     $ sudo apt-get install ros-foxy-object-recognition-msgs
@@ -58,7 +58,6 @@
 
 #### Everytime you build a package, always remember to do (from your ROS2 workspace): source install/setup.bash and source /opt/ros/foxy/setup.bash
 
-
 #### dependency package list
     $ sudo apt-get install ros-foxy-control-msgs ros-foxy-realtime-tools ros-foxy-xacro ros-foxy-joint-state-publisher-gui ros-foxy-object-recognition-msgs ros-foxy-octomap-msgs ros-foxy-gazebo-ros ros-foxy-gazebo-ros-pkgs ros-foxy-control-toolbox
 
@@ -70,6 +69,14 @@ Using the robot model and the `joint_state_publisher_gui` package, you can see t
 $ ros2 launch dsr_launcher2 dsr_joint_state_pub.launch.py model:=a0912 color:=blue
 ``` 
 <img src="https://user-images.githubusercontent.com/47092672/97652654-40da3b00-1aa2-11eb-8621-2a36e3159de0.png" width="70%">
+
+### RuntimeError
+xacro 실행시 발생하는 오류일 수 있음. yaml 파일을 읽을때 발생하는 오류로 패키지가 필요함
+    $ pip install pyyaml
+    $ xacro /home/do/ros2_ws/install/dsr_description2/share/dsr_description2/xacro/a0912.urdf.xacro color:=blue
+위 xacro 코드를 실행시 오류가 발생한다면 오류 로그를 확인하고 내 경우는 pyyaml을 설치하면 해결되었음
+정상적이라면 정상적으로 코드가 출력됨
+
 
 ### Virtual Mode
 If the "mode" argument is set to virtual, the DRCF emulator is automatically executed when launch.py ​​is executed.
