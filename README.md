@@ -77,6 +77,15 @@ xacro 실행시 발생하는 오류일 수 있음. yaml 파일을 읽을때 발�
 위 xacro 코드를 실행시 오류가 발생한다면 오류 로그를 확인하고 내 경우는 pyyaml을 설치하면 해결되었음
 정상적이라면 정상적으로 코드가 출력됨
 
+### 추가로 배운 것
+1) dependency package list로 필요한 패키지 미리 다운로드하는 것
+2) rosdep으로 cMakeList.txt에 존재하는 라이브러리 다운로드 하는거 같음
+3) 초기단계라면 src말고 다른 build, log 등 파일 삭제하고 다시 colcon build 하면 될 듯
+    $ rm -rf ~/ros2_ws/build
+    $ rm -rf ~/ros2_ws/install
+    $ rm -rf ~/ros2_ws/log
+4) 이전 시도에서 gazebo 다운로드(최신버전)를 미리 안하고 진행했을 때 gazebo 실행 때 오류가 있었는데 이번에는 없었음
+
 
 ### Virtual Mode
 If the "mode" argument is set to virtual, the DRCF emulator is automatically executed when launch.py ​​is executed.
