@@ -132,9 +132,9 @@ $ ros2 launch dsr_launcher2 single_robot_gazebo.launch.py
 ```
 <img src="https://user-images.githubusercontent.com/47092672/99232226-fe9c5200-2834-11eb-8719-f87cc56d55c7.gif" width="70%">
 
-### Before install moveit
+### Before install moveit check CMake version
 
-CMake version >= 3.22, 기본 CMake version in Ubuntu 20.04 = 3.16.3
+권장 CMake version >= 3.22, 기본 CMake version in Ubuntu 20.04 = 3.16.3
 
     $ sudo apt remove --purge cmake
     $ wget https://github.com/Kitware/CMake/releases/download/v3.25.0/cmake-3.25.0.tar.gz
@@ -144,8 +144,10 @@ CMake version >= 3.22, 기본 CMake version in Ubuntu 20.04 = 3.16.3
     $ make
     $ sudo make install
     $ cmake --version
+    
+    > bash: /usr/bin/cmake: No such file or directory
 
-여기서 /usr/local/bin에 설치된 CMake에서 cmake error가 발생한다면 PATH를 설정해줘야함
+여기서 /usr/local/bin에 설치된 CMake에서 위와 같은 error가 발생한다면 PATH를 설정해줘야함
 
     $ export PATH=/usr/local/bin:$PATH
     $ echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bashrc
