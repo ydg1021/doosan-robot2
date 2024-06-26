@@ -132,6 +132,33 @@ $ ros2 launch dsr_launcher2 single_robot_gazebo.launch.py
 ```
 <img src="https://user-images.githubusercontent.com/47092672/99232226-fe9c5200-2834-11eb-8719-f87cc56d55c7.gif" width="70%">
 
+### Before install moveit
+
+CMake version >= 3.22, 기본 CMake version in Ubuntu 20.04 = 3.16.3
+
+$ sudo apt remove --purge cmake
+$ wget https://github.com/Kitware/CMake/releases/download/v3.25.0/cmake-3.25.0.tar.gz
+$ tar -zxvf cmake-3.25.0.tar.gz
+$ cd cmake-3.25.0
+$ ./bootstrap
+$ make
+$ sudo make install
+$ cmake --version
+
+여기서 /usr/local/bin에 설치된 CMake에서 cmake error가 발생한다면 PATH를 설정해줘야함
+
+$ export PATH=/usr/local/bin:$PATH
+$ echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bashrc
+$ source ~/.bashrc
+$ cmake --version
+>> cmake --version
+cmake version 3.25.0
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+
+
+
 ### Moveit
 To use the moveit2 package, you need to install the following packages.
 ```bash
