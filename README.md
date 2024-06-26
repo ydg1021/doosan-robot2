@@ -108,11 +108,11 @@ $ ros2 run dsr_example2_py dsr_service_motion_simple
 
 ### Real Mode
 Use __real mode__ to drive a real robot   
-The default IP of the robot controller is _192.168.127.100_ and the port is _12345_.
+The default IP of the robot controller is _192.168.137.100_ and the port is _12345_.
 
 ##### Run dsr_control2 node 
 ```bash
-$ ros2 launch dsr_launcher2 single_robot_rviz.launch.py mode:=real host:=192.168.127.100 port:=12345
+$ ros2 launch dsr_launcher2 single_robot_rviz.launch.py mode:=real host:=192.168.137.100 port:=12345
 ```
 
 ##### Run the example scripts
