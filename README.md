@@ -157,7 +157,21 @@ $ ros2 launch dsr_launcher2 single_robot_gazebo.launch.py
     > cmake version 3.25.0
     > CMake suite maintained and supported by Kitware (kitware.com/cmake).
 
+설치 과정 중 생성된 필요없어진 파일과 폴더 삭제 방법 (생략가능)
 
+    1. 다운로드한 tar.gz 파일 삭제:
+
+    $ rm ~/cmake-3.25.0.tar.gz
+
+    2. 압축을 푼 디렉토리 삭제:
+
+    $ rm -rf ~/cmake-3.25.0
+
+    만약 CMake를 /usr/local에 설치한 이후로 더 이상 필요하지 않은 빌드 디렉토리를 삭제하고 싶다면, 빌드 디렉토리로 이동하여 make clean 명령을 사용하면 됩니다.
+
+    $ cd ~/cmake-3.25.0
+    $ make clean
+    $ rm -rf ~/cmake-3.25.0
 
 
 ### Moveit
